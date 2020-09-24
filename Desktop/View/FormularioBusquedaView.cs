@@ -39,5 +39,68 @@ namespace Evaluacion_IM.View
         {
 
         }
+
+        private void onCodigoWrite(object sender, KeyPressEventArgs e)
+        {
+            if ( !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void onNombreWrite(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar)&& !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (Codigo.TextLength > 0)
+            {
+                button1.Enabled = true;
+            }
+            else
+            {
+                if (Nombre.TextLength <= 0)
+                {
+                    button1.Enabled = false;
+                }
+            }
+        }
+
+        private void onCodigoWrite(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void onCodigoWrited(object sender, KeyEventArgs e)
+        {
+            if (Codigo.Text.Trim().Length > 0)
+            {
+                button1.Enabled = true;
+            }
+            else
+            {
+                if (Nombre.Text.Trim().Length <= 0)
+                {
+                    button1.Enabled = false;
+                }
+            }
+        }
+
+        private void onNombreWrited(object sender, KeyEventArgs e)
+        {
+            if (Nombre.Text.Trim().Length > 0)
+            {
+                button1.Enabled = true;
+            }
+            else
+            {
+                if (Codigo.Text.Trim().Length <= 0)
+                {
+                    button1.Enabled = false;
+                }
+            }
+        }
     }
 }

@@ -31,5 +31,25 @@ namespace Evaluacion_IM.View
                 dataModificarNombre.DataSource=consultasService.consulta3(newName.Text);
             }
         }
+
+        private void onNameWrite(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar)&&!char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void onNameWrited(object sender, KeyEventArgs e)
+        {
+            if (newName.Text.Trim().Length > 0)
+            {
+                cambiarNombre.Enabled = true;
+            }
+            else
+            {
+                cambiarNombre.Enabled = false;
+            }
+        }
     }
 }

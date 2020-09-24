@@ -46,17 +46,15 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.busquedaDataGrid, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
@@ -68,20 +66,21 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.button1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(300, 3);
-            this.tableLayoutPanel2.MinimumSize = new System.Drawing.Size(0, 100);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(250, 3);
+            this.tableLayoutPanel2.MinimumSize = new System.Drawing.Size(300, 100);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 219);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(300, 129);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(62, 152);
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(112, 85);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -98,35 +97,42 @@
             this.tableLayoutPanel3.Controls.Add(this.Nombre, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(194, 100);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(294, 58);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
             // Codigo
             // 
             this.Codigo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Codigo.Location = new System.Drawing.Point(3, 65);
+            this.Codigo.Location = new System.Drawing.Point(28, 33);
+            this.Codigo.MaxLength = 2;
             this.Codigo.Name = "Codigo";
             this.Codigo.Size = new System.Drawing.Size(91, 20);
             this.Codigo.TabIndex = 0;
+            this.Codigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onCodigoWrite);
+            this.Codigo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.onCodigoWrited);
             // 
             // Nombre
             // 
             this.Nombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Nombre.Location = new System.Drawing.Point(100, 65);
+            this.Nombre.Location = new System.Drawing.Point(175, 33);
+            this.Nombre.MaxLength = 70;
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(91, 20);
             this.Nombre.TabIndex = 1;
+            this.Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onNombreWrite);
+            this.Nombre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.onNombreWrited);
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 18);
+            this.label1.Location = new System.Drawing.Point(53, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 2;
@@ -137,7 +143,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(123, 18);
+            this.label2.Location = new System.Drawing.Point(198, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 3;
@@ -149,10 +155,10 @@
             this.busquedaDataGrid.AllowUserToDeleteRows = false;
             this.busquedaDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.busquedaDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.busquedaDataGrid.Location = new System.Drawing.Point(3, 228);
+            this.busquedaDataGrid.Location = new System.Drawing.Point(3, 138);
             this.busquedaDataGrid.Name = "busquedaDataGrid";
             this.busquedaDataGrid.ReadOnly = true;
-            this.busquedaDataGrid.Size = new System.Drawing.Size(794, 219);
+            this.busquedaDataGrid.Size = new System.Drawing.Size(794, 309);
             this.busquedaDataGrid.TabIndex = 1;
             // 
             // FormularioBusquedaView

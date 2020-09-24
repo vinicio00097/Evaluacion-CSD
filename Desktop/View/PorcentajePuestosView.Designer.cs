@@ -38,22 +38,22 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.refreshPorcentajePuestos, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataPorcentajePuestos, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // refreshPorcentajePuestos
             // 
             this.refreshPorcentajePuestos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.refreshPorcentajePuestos.Location = new System.Drawing.Point(362, 101);
+            this.refreshPorcentajePuestos.Location = new System.Drawing.Point(362, 33);
             this.refreshPorcentajePuestos.Name = "refreshPorcentajePuestos";
             this.refreshPorcentajePuestos.Size = new System.Drawing.Size(75, 23);
             this.refreshPorcentajePuestos.TabIndex = 0;
@@ -67,10 +67,10 @@
             this.dataPorcentajePuestos.AllowUserToDeleteRows = false;
             this.dataPorcentajePuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataPorcentajePuestos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataPorcentajePuestos.Location = new System.Drawing.Point(3, 228);
+            this.dataPorcentajePuestos.Location = new System.Drawing.Point(3, 93);
             this.dataPorcentajePuestos.Name = "dataPorcentajePuestos";
             this.dataPorcentajePuestos.ReadOnly = true;
-            this.dataPorcentajePuestos.Size = new System.Drawing.Size(794, 219);
+            this.dataPorcentajePuestos.Size = new System.Drawing.Size(794, 354);
             this.dataPorcentajePuestos.TabIndex = 1;
             // 
             // PorcentajePuestosView

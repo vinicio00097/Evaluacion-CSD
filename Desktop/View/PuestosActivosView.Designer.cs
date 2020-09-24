@@ -38,22 +38,22 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.refreshPuestosActivos, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataPuestosActivos, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // refreshPuestosActivos
             // 
             this.refreshPuestosActivos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.refreshPuestosActivos.Location = new System.Drawing.Point(362, 101);
+            this.refreshPuestosActivos.Location = new System.Drawing.Point(362, 33);
             this.refreshPuestosActivos.Name = "refreshPuestosActivos";
             this.refreshPuestosActivos.Size = new System.Drawing.Size(75, 23);
             this.refreshPuestosActivos.TabIndex = 0;
@@ -65,9 +65,9 @@
             // 
             this.dataPuestosActivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataPuestosActivos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataPuestosActivos.Location = new System.Drawing.Point(3, 228);
+            this.dataPuestosActivos.Location = new System.Drawing.Point(3, 93);
             this.dataPuestosActivos.Name = "dataPuestosActivos";
-            this.dataPuestosActivos.Size = new System.Drawing.Size(794, 219);
+            this.dataPuestosActivos.Size = new System.Drawing.Size(794, 354);
             this.dataPuestosActivos.TabIndex = 1;
             // 
             // PuestosActivosView
